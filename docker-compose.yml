@@ -1,7 +1,13 @@
 services:
   nginx:
+    container_name: test-website-nginx
     image: nginx:apline
     ports:
       - 79:80
-  volumes:
-    - ./:/usr/share/nginx/html
+    volumes:
+      - './:/usr/share/nginx/html'
+    networks:
+      - nginx_default
+networks:
+  nginx_default:
+    external: true
