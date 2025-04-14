@@ -1,7 +1,7 @@
 services:
   nginx:
     container_name: test-website-nginx
-    image: nginx:apline
+    image: nginx:latest
     ports:
       - 79:80
     volumes:
